@@ -5,8 +5,8 @@
     "main": "dist/bundle.js",
     "license": "MIT",
     "author": {
-        "name": "Russ Biggs",
-        "url": "https://russbiggs.com"
+        "name": "Young-Lord",
+        "url": "https://github.com/Young-Lord"
     },
     "scripts": {
         "build-css": "sass --load-path=scss src/scss/main.scss dist/style.css --style=compressed",

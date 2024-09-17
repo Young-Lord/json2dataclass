@@ -1,17 +1,10 @@
-
-
 # JSON2dataclass
 
-[https://russbiggs.github.io/json2dataclass](https://russbiggs.github.io/json2dataclass)
-
+[https://young-lord.github.io/json2dataclass](https://young-lord.github.io/json2dataclass)
 
 JSON2dataclass is a tool to generate Python dataclass definitions from a JSON string easily in your browser.
 
-Blog post on how to incorporate dataclasses in reading JSON API responses [here](https://blog.jetbrains.com/pycharm/2018/04/python-37-introducing-data-class/)
-
-Heavily inspired by [json-to-go](https://mholt.github.io/json-to-go/)
-
-### Example conversion:
+## Example conversion
 
 From the [Star Wars API](https://swapi.co/)
 
@@ -32,7 +25,8 @@ From the [Star Wars API](https://swapi.co/)
     ],
     "created": "2014-12-10T11:37:19.144000Z",
     "edited": "2014-12-20T20:58:18.421000Z",
-    "url": "https://swapi.co/api/planets/3/"
+    "url": "https://swapi.co/api/planets/3/",
+    "extra": null
 }
 ```
 
@@ -50,12 +44,19 @@ class GeneratedClass:
     terrain: str
     surface_water: str
     population: str
-    films: List[str]
+    films: list[str]
     created: str
     edited: str
     url: str
+    extra: None
 ```
 
 ## Contributing
 
 JSON2dataclass is written in [Typescript](https://www.typescriptlang.org/) and uses [Yarn](https://yarnpkg.com/en/) for package management. Contributions are welcome in the form of issues and pull requests.
+
+## License
+
+MIT License, Young-Lord
+
+MIT License, Russ Biggs <https://russbiggs.com>
