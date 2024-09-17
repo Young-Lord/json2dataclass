@@ -124,15 +124,15 @@ class PythonOutput {
                     }
                 }
                 if (listTypes.size < 1) {
-                    obj[key] = `List`;
+                    obj[key] = `list`;
                 } else if (listTypes.size > 1) {
                     if (this.imports.indexOf('union') == -1) {
                         this.imports.push('union');
                     }
                     let typeArr = Array.from(listTypes.values());
-                    obj[key] = `List[Union[${typeArr.join(', ')}]]`;
+                    obj[key] = `list[${typeArr.join(' | ')}]`;
                 } else {
-                    obj[key] = `List[${listTypes.values().next().value}]`;
+                    obj[key] = `list[${listTypes.values().next().value}]`;
                 }
             } else if (data[key] !== null && typeof data[key] == 'object') {
                 obj[key] = properCase(key);
@@ -197,7 +197,9 @@ const findType = (data: boolean | number | String, datetime: boolean): string =>
     if (typeof data == 'boolean') {
         return 'bool';
     }
-    return 'str';
+    if (data === null) {
+        return 'None';
+    }
 };
 
 export default PythonOutput;
