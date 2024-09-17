@@ -8,15 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="manifest" href="./site.webmanifest">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>JSON2dataclass</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143679232-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-143679232-1');
-    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,7 +30,7 @@
                 <label for="datetime-toggle">use datetime.datetime</label>
                 <input type="checkbox" name="import-toggle" id="import-toggle">
                 <label for="import-toggle">include imports</label>
-                <input type="checkbox" name="snake-case-toggle" id="snake-case-toggle" checked>
+                <input type="checkbox" name="snake-case-toggle" id="snake-case-toggle">
                 <label for="snake-case-toggle">camelCase to snake_case</label>
             </div>
         </section>
@@ -53,8 +45,7 @@
 
         <footer>
             <div class="footer-items">
-                <div class="copyright">&copy; Russ Biggs 2020</div>
-                <a href="https://github.com/russbiggs/json2dataclass" aria-label="json2dataclass github page" class="github"><div class="github-icon"></div></a>
+                <a href="https://github.com/Young-Lord/json2dataclass" aria-label="json2dataclass github page" class="github"><div class="github-icon"></div></a>
             </div>
         </footer>
         <div class="js-modal modal">
@@ -69,10 +60,6 @@
             </div>
         <div class="js-modal__background modal__background"></div>
     </div>
-    <script src="https://browser.sentry-cdn.com/5.5.0/bundle.min.js" crossorigin="anonymous"></script>
-    <script>
-        Sentry.init({ dsn: 'https://6cde4a4b0cb94273b3b6bcb2a6291694@sentry.io/1502884' });
-    </script>
     <script src="bundle.js"> </script>
 </body>
 </html>
