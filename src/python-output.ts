@@ -18,7 +18,7 @@ class PythonOutput {
         this.imports = [];
         this.includeImports = false;
         this.datetime = false;
-        this.snakeCase = true;
+        this.snakeCase = false;
         this.data = '';
         this.addEventListeners();
     }
