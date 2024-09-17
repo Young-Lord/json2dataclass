@@ -9,7 +9,7 @@
         "url": "https://russbiggs.com"
     },
     "scripts": {
-        "build-css": "node-sass --include-path scss src/scss/main.scss  dist/style.css --output-style compressed",
+        "build-css": "sass --load-path=scss src/scss/main.scss dist/style.css --style=compressed",
         "build": "microbundle -f cjs && cp src/index.html dist/index.html && cp -r static/ dist && yarn run build-css"
     },
     "devDependencies": {
@@ -17,7 +17,7 @@
         "@typescript-eslint/parser": "^2.28",
         "eslint": "^6.8",
         "microbundle": "^0.11",
-        "node-sass": "^4.13",
+        "sass": "^1.78",
         "typescript": "^3.8"
     },
     "dependencies": {}
