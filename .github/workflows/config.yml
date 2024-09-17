@@ -25,7 +25,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/fermium
-      - run: |
+      - name: Build
+        run: |
           mkdir dist
           yarn install && yarn run build
           mv dist/static/* dist/
